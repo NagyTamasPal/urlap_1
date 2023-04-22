@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Űrlap_1</title>
+    <title>Regisztrációs űrlap</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <main>
+        <header>
+            <h1>Regisztrációs űrlap</h1>
+
+        </header>
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Belépési adatok</legend>
+                    <p><label for="user_name">Felhasználói név:</label>
+                        <input id="user_name" type="text" size="10" maxlength="20" required>
+                    </p>
+                    <p><label for="password">Jelszó:</label>
+                        <input id="password" type="password" size="10" maxlength="20" required>
+                    </p>
+                    <p><label for="email">e-mail cím:</label>
+                        <input id="email" type="email" placeholder="valami@valami.com" size="10" maxlength="20"
+                            required>
+                        <span>valami@valami.com</span>
+                    </p>
+                    <p><label for="udv">Üdvözlő szöveg</label><br>
+                        <textarea name="udvozlo" id="udv" cols="30" rows="8"></textarea>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Iskolai adatok</legend>
+                    <p>Tanult Nyelv <br>
+                        <label for="en">Angol</label>
+                        <input type="checkbox" value="Angol" id="en" checked><br>
+                        <label for="de">Német</label>
+                        <input type="checkbox" value="Nemet" id="de"><br>
+                        <label for="ru">Orosz</label>
+                        <input type="checkbox" value="Orosz" id="ru"><br>
+                    </p>
+                    <p>
+                        <label for="tsz">Tanult Szakma:</label>
+                        <select name="Szakok" id="tsz">
+                            <option value="none">válassz !</option>
+                            <option value="szoftver">szoftverfejlesztő</option>
+                            <option value="fodrasz">fodrász</option>
+                            <option value="rendeszeti">rendészeti őr</option>
+                        </select>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Személyes adatok</legend>
+                    <p>
+                        <label for="fiu">fiú</label>
+                        <input type="radio" value="fiu" id="fiu" name="nem" checked>
+                        <label for="lany">lány</label>
+                        <input type="radio" value="lany"  id="lany" name="nem">
+                        <label for="ufo">ufó</label>
+                        <input type="radio" value="ufo"  id="ufo" name="nem" >
+                    </p>
+                    <p>
+                        <label for="szul">Születési idő:</label>
+                        <input type="date" name="szuletes-date" id="szul">
+                    </p>
+                    <p>
+                        <label for="kor">Kor</label>
+                        <input type="number" name="kor" id="kor"
+                        min="10"
+                        max="110">
+                    </p>
+
+                </fieldset>
+                <p>
+                    <input type="reset">
+                    <input type="submit">
+                    <input type="button" value="Számold ki" onclick="calc">
+                </p>
+            </form>
+
+        </section>
+        <footer>
+
+        </footer>
+    </main>
 </body>
+
 </html>
